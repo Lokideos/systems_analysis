@@ -235,7 +235,7 @@ Security Concerns:
 * Agility
 * Securability (security)
 * Usability
-* Scalability и Elasticiy в контексте Рекрутинга
+* Scalability и Elasticity в контексте Рекрутинга
 
 ## Архитектурный стиль
 
@@ -248,11 +248,34 @@ Security Concerns:
 
 Исходя из требований по Scalability и Agility я остановился на Service-Based architecture.
 
+## Итоговая модель системы
+
+### Сервисы
+
+В итоге получились следующие сервисы:
+* Отдельный сервис Рекрутинга для выполнения требований по Securability, Scalability и Elasticity
+* Сервис Личного Кабинета Клиента, где клиента запрашивает новые задачи
+* Портал выполнения задач, где Воркер выполняет задачи
+* Отдельная система матчинга
+  * Не уверен, что уникальный для этого домена ubiquitous language оправдывает создание отдельного сервиса
+* Система комплектации заказа, включающая себя как расходники, так и печеньку для лояльности
+* Контроль качества
+* Асинхронный биллинг
+* Ставки
+
+### Коммуниакции
+
+В итоге получилась следующая [диаграма коммуникаций].
+Каждый элемент - отдельный сервис.
+Получилось много доменных эвентов, и я не уверен, что стоило разделять клиентскую часть и часть воркеров на этом этапе.
+С другой стороны асинхронный биллинг и ставки хорошо ложатся на эту архитектуру.
+
 
 ---
 
-[таблицу поддоменов]: (https://docs.google.com/spreadsheets/d/1l5SCBlFpdqd8tn2XNKZCdGuPMW5dmHmDSm5WLNXA9nA/edit?gid=0#gid=0)
-[таблицу контекстов]: (https://docs.google.com/spreadsheets/d/1l5SCBlFpdqd8tn2XNKZCdGuPMW5dmHmDSm5WLNXA9nA/edit?gid=1428376046#gid=1428376046
+[таблицу поддоменов]: https://docs.google.com/spreadsheets/d/1l5SCBlFpdqd8tn2XNKZCdGuPMW5dmHmDSm5WLNXA9nA/edit?gid=0#gid=0
+[таблицу контекстов]: https://docs.google.com/spreadsheets/d/1l5SCBlFpdqd8tn2XNKZCdGuPMW5dmHmDSm5WLNXA9nA/edit?gid=1428376046#gid=1428376046
 [miro board]: https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764614858722206&cot=14
-[Miro доске с контекстами]: (https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764614873088172&cot=14)
-[Event Storming'a]: (https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764614874642750&cot=14)
+[Miro доске с контекстами]: https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764614873088172&cot=14
+[Event Storming'a]: https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764614874642750&cot=14
+[диаграма коммуникаций]: https://lucid.app/documents/embedded/28239d33-0758-4da9-b295-99e8b710244c
