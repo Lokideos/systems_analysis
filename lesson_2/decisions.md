@@ -237,6 +237,17 @@ Security Concerns:
 * Usability
 * Scalability и Elasticiy в контексте Рекрутинга
 
+## Архитектурный стиль
+
+Я использовал картинку из урока для сравнения архитектурных стилей
+![img.png](img.png)
+
+С учетом Cost (который всегда важен для бизнеса) и с учетом важных для бизнеса харктеристик выбор идем между двумя стилями:
+* Modular Monolith
+* Service-Based
+
+Исходя из требований по Scalability и Agility я остановился на Service-Based architecture.
+
 
 ---
 
