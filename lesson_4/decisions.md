@@ -62,8 +62,8 @@ I = Ce / (Ca + Ce).
 не получиться совсем.
 2. Тут матчинг - это часть контекста выполнения заказов, а на самом деле это отдельный кор поддомен
 со своей реализацией и с другими архитектурными характеристиками. В какой-то момент поддерживать это
-станет невозможно и придется это долго и мучительно выносить.
-  ![dio.png](dio.png)
+станет невозможно и придется это долго и мучительно выносить.  
+![dio.png](dio.png)
 3. Я не заметил различий между расчетами для клиетов и для воркеров, из-за чего получился один домен и
 сервис для них несмотря на разные характеристики для этих элементов
 (modifiability, evolability и configurability для расчета клиентов) исходя из требований 
@@ -168,7 +168,7 @@ I = Ce / (Ca + Ce).
 
 --- 
 
-[Services Diagram]: https://lucid.app/lucidchart/bedf4e29-bcc3-4db8-9044-5c40042b560e/edit?viewport_loc=-456%2C103%2C1963%2C1033%2C0_0&invitationId=inv_3dd92bfe-4c1b-4cce-b895-d13ce82916f8
+[Services Diagram]: https://lucid.app/documents/embedded/bedf4e29-bcc3-4db8-9044-5c40042b560e#
 [следующая схема контекстов и доменов в Miro]: https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764616434707984&cot=14
 [схема сервисов там же]: https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764616434708224&cot=14
 [карта сервисов]: https://miro.com/app/board/uXjVLrCcUFQ=/?moveToWidget=3458764616435621228&cot=14
